@@ -4,117 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌊My First Webpage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <table border="1" width="100%" cellpadding="10">
-    <tr>
-      <td width="25%" valign="top">
-        <h2>Menu</h2>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#photo">Photo</a></li>
-          <li><a href="#schedule">Weekly Schedule</a></li>
-          <li><a href="#forms">Forms</a></li>
+  <div class="grid-layout">
+    <header id="top-banner" class="grid-header">
+      <nav id="navbar">
+        <div class="logo-container">
+          <img src="cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA4L3Jhd3BpeGVsX29mZmljZV8zM19mcm9udF92aWV3XzNkX3JlbmRlcl9pY29uX29mX3N0YXJfd2l0aF9hX3NsZV84MzQ2NTc5MS1iZTc5LTQzYzktYWI2OS0zNWUxODJkN2NkZTgucG5n-removebg-previe.png" width="80" height="80" alt="Logo">
+          <div class="logo">Code with Bota</div>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#photo">Photo</a></li>
+          <li><a class="nav-link" href="#schedule">Weekly Schedule</a></li>
+          <li><a class="nav-link" href="#gallery-section">Gallery</a></li>
+          <li><a class="nav-link" href="#forms">Forms</a></li>
         </ul>
-      </td>
+      </nav>
+    </header>
 
-      <td width="75%" valign="top">
-        <h2>About Me</h2>
-        <h1 id="home">Karimolda Akbota</h1>
-        <p>2<sup>nd</sup> year - Software Engineering</p>
-        <p>HELLOOOO✨! My name is Akbota and I am 18 years old.</p>
-      </td>
-    </tr>
-  </table>
-  
-  <h3>My Mood Today</h3>
-  <p>Today was kind of a hard day 😓, but because I stayed at home 🏡 I feel good 😌✨.</p>
-  <h3>My Hobbies</h3>
-   <ol> <li>Reading webtoons📚</li>
-     <li>Dancing💃</li> 
-     <li>Watching kdramas🍿📺</li>
-     </ol>
+    <!-- Sidebar -->
+    <aside class="grid-sidebar">
+      <section id="portfolio">
+        <h3 class="section-heading">My Portfolio</h3>
+        <li class="portfolio"><a class="external-link" href="portfolio.html">My Portfolio</a></li>
+      </section>
+      <section id="mood-section">
+        <h3 class="section-heading">My Mood Today</h3>
+        <p class="paragraph-text">Today was kind of a hard day 😓, but because I stayed at home 🏡 I feel good 😌✨.</p>
+      </section>
+      <br>
+      <section id="websites-section">
+        <h3 class="section-heading">My Favourite Websites</h3>
+        <ul class="list-items"> 
+          <li><a class="external-link" href="https://lms.astanait.edu.kz" target="_blank">Moodle</a></li>
+          <li><a class="external-link" href="https://learn.astanait.edu.kz" target="_blank">Learn</a></li>
+          <li><a class="external-link" href="https://du.astanait.edu.kz/" target="_blank">DU</a></li>
+        </ul>
+      </section>
+    </aside>
 
-      <h3>My Favourite Websites</h3> 
-      <ul> <li><a href="https://lms.astanait.edu.kz" target="_blank">Moodle</a></li>
-         <li><a href="https://learn.astanait.edu.kz" target="_blank">Learn</a></li>
-          <li><a href="https://du.astanait.edu.kz/" target="_blank">DU</a></li>
-      </ul>
+    <!-- Main Content -->
+    <main id="content-wrapper" class="grid-main">
+      <section id="about-section">
+        <h2 class="section-heading">About Me</h2>
+        <p id="home" class="paragraph-text">Karimolda Akbota</p>
+        <p class="paragraph-text">HELLOOOO✨My name is Akbota and I am 18 years old  . I am 2nd
+         year - Software Engineering student.</p>
+      </section>
 
-    <hr>
-  <h2 id="photo">Picture of me</h2>
-  <img src="WhatsApp Image 2025-09-10 at 18.48.15 (1).jpeg" alt="picture of Akbota" width="300">
+      <section id="hobbies-section">
+        <h3 class="section-heading">My Hobbies</h3>
+        <div class="card-container">
+          <div class="card">
+            <img src="desktop-wallpaper-late-night-studying-1920-x-1080-r.jpg" alt="Hobby 1" class="card-image">
+          </div>
+          <div class="card">
+            <img src="41361f587dac9f980e6f0627394f7d4e.jpg" alt="Hobby 2" class="card-image">
+          </div>
+          <div class="card">
+            <img src="desktop-wallpaper-studying-girl-ai-resized-studying-girl-art-anime-scenery-aesthetic-girls-computer.jpg" alt="Hobby 3" class="card-image">
+          </div>
+        </div>
+      </section>
+
+      <section id="photo-section">
+        <h2 id="photo" class="section-heading">Some picture</h2>
+        <img class="featured-image" src="1600w-IJjKe9JIOeM.webp" alt="picture of Akbota" width="900" height="500"><br>
+        <button type="button" class="btn-primary">Click me👆</button>
+      </section>
+
+      <section id="schedule-section">
+        <h2 class="section-heading" id="schedule">Weekly Class Schedule📅</h2>
+        <table class="schedule-table">
+          <tr>
+            <th>Subject</th>
+            <th>Day</th>
+            <th>Time</th>
+          </tr>
+          <tr>
+            <td>Design and Analysis of Algorithms</td>
+            <td>Monday</td>
+            <td>18:00 - 19:50</td>
+          </tr>
+          <tr>
+            <td>Russian</td>
+            <td>Tuesday</td>
+            <td>16:00 - 17:50</td>
+          </tr>
+          <tr>
+            <td>Software Design Patterns</td>
+            <td>Tuesday</td>
+            <td>18:00 - 18:50</td>
+          </tr>
+          <tr>
+            <td>WEB Technologies 1</td>
+            <td>Wednesday</td>
+            <td>13:05 - 14:50</td>
+          </tr>
+          <tr>
+            <td>Software Design Patterns</td>
+            <td>Wednesday</td>
+            <td>16:00 - 17:50</td>
+          </tr>
+          <tr>
+            <td>Design and Analysis of Algorithms</td>
+            <td>Wednesday</td>
+            <td>18:00 - 19:50</td>
+          </tr>
+          <tr>
+            <td>Software Design Patterns</td>
+            <td>Friday</td>
+            <td>12:00 - 13:55</td>
+          </tr>
+          <tr>
+            <td>Design and Analysis of Algorithms</td>
+            <td>Friday</td>
+            <td>14:00 - 14:50</td>
+          </tr>
+          <tr>
+            <td>WEB Technologies 1</td>
+            <td>Friday</td>
+            <td>15:00 - 15:50</td>
+          </tr>
+        </table>
+      </section>
+
+        <!--  IMAGE GALLERY -->
+      <section id="gallery-section">
+        <h2 class="section-heading">My Image Gallery</h2>
+        <div class="gallery-container">
+          <div class="gallery-item"><img src="cattt.jpg" alt="Image 1"></div>
+          <div class="gallery-item"><img src="cat1.jpg" alt="Image 2"></div>
+          <div class="gallery-item"><img src="cat2.jpg" alt="Image 3"></div>
+          <div class="gallery-item"><img src="room1.jpg" alt="Image 4"></div>
+          <div class="gallery-item"><img src="room2.jpg" alt="Image 5"></div>
+          <div class="gallery-item"><img src="room3.jpg" alt="Image 6"></div>
+          <div class="gallery-item"><img src="winter1.jpg" alt="Image 7"></div>
+          <div class="gallery-item"><img src="winter2.jpg" alt="Image 8"></div>
+          <div class="gallery-item"><img src="winter3.jpg" alt="Image 9"></div>
+        </div>
+      </section>
 
 
+      <section id="forms-section">
+        <h2 id="forms" class="section-heading">Forms📝</h2>
+        <form id="user-form" action="#" method="post">
+          <label for="name">Name:</label><br>
+          <input class="form-input" type="text" id="name" name="name" required><br><br>
+          <label for="email">Email:</label><br>
+          <input class="form-input" type="email" id="email" name="email" required><br><br>
+          <label for="color">Favorite Color:</label><br>
+          <input class="form-input" type="color" id="color" name="favoriteColor"><br><br>
+          <input class="submit-btn" type="submit" value="Submit">
+        </form>
+      </section>
 
-  <button type="button">Click me👆</button>
+    
+    </main>
 
-    <hr>
-  <h2 id="schedule">Weekly Class Schedule📅</h2>
-  <table border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <th>Subject</th>
-      <th>Day</th>
-      <th>Time</th>
-    </tr>
-    <tr>
-      <td>Design and Analysis of Algorithms</td>
-      <td>Monday</td>
-      <td>18:00 - 19:50</td>
-    </tr>
-    <tr>
-      <td>Russian</td>
-      <td>Tuesday</td>
-      <td>16:00 - 17:50</td>
-    </tr>
-    <tr>
-      <td>Software Design Patterns</td>
-      <td>Tuesday</td>
-      <td>18:00 - 18:50</td>
-    </tr>
-    <tr>
-      <td>WEB Technologies 1</td>
-      <td>Wednesday</td>
-      <td>13:05 - 14:50</td>
-    </tr>
-    <tr>
-      <td>Software Design Patterns</td>
-      <td>Wednesday</td>
-      <td>16:00 - 17:50</td>
-    </tr>
-    <tr>
-      <td>Design and Analysis of Algorithms</td>
-      <td>Wednesday</td>
-      <td>18:00 - 19:50</td>
-    </tr>
-    <tr>
-      <td>Software Design Patterns</td>
-      <td>Friday</td>
-      <td>12:00 - 13:55</td>
-    </tr>
-    <tr>
-      <td>Design and Analysis of Algorithms</td>
-      <td>Friday</td>
-      <td>14:00 - 14:50</td>
-    </tr>
-    <tr>
-      <td>WEB Technologies 1</td>
-      <td>Friday</td>
-      <td>15:00 - 15:50</td>
-    </tr>
-  </table>
-  <hr>
-
-  <h2 id="forms">Forms📝</h2>
-  <form action="#" method="post">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="color">Favorite Color:</label><br>
-    <input type="color" id="color" name="favoriteColor"><br><br>
-    <input type="submit" value="Submit">
-  </form>
-
+    <!-- Footer -->
+    <footer id="footer-container" class="grid-footer">
+      <p>&copy; 2025 Akbota</p>
+    </footer>
+  </div>
 </body>
 </html>
